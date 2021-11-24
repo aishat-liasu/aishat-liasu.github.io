@@ -1,0 +1,55 @@
+@import url(./fonts/font.css);
+
+body {
+    margin: 0;
+    padding: 0;
+
+    
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 400;
+    padding: 10px;
+    text-align: center;
+}
+
+.page {
+    font-family: Inter, Arial, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+}
+
+.footer {
+    display: flex;
+}
+
+.footer__list {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+ 
+}
+
+.footer__list-item {
+    padding: 20px;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: white;
+  padding: 5px 0;
+}
+
+.footer__link:hover {
+    border-bottom: 2px solid white;
+}
