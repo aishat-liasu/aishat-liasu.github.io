@@ -1,2 +1,2 @@
-# arike-liasu.github.io
+# Aishat Liasu
 My personal website
