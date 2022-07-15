@@ -1,14 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `My Website`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Aishat Liasu`,
+    siteUrl: `https://aishatliasu.com`,
+    description: 'Aishat Liasu | Full Stack Web Developer'
   },
   plugins: ["gatsby-plugin-react-helmet", "gatsby-plugin-mdx", {
     resolve: 'gatsby-source-filesystem',
     options: {
-      "name": "pages",
-      "path": "./src/pages/"
+      "name": "posts",
+      "path": `${__dirname}/src/posts`
     },
-    __key: "pages"
+    __key: "posts"
   }]
 };
