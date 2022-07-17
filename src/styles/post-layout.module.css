@@ -1,0 +1,94 @@
+.post-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-header h2 {
+  font-size: 24px;
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+.post-header a {
+  text-decoration: none;
+  font-weight: 400;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.post-header a:hover {
+  text-decoration: underline;
+}
+
+.post-footer {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.post-header nav,
+.post-footer nav {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.post-header button,
+.post-footer button {
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--taupe);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 12px;
+}
+
+.post-header button:hover,
+.post-footer button:hover {
+  background-color: var(--darktaupe);
+}
+
+.post-header button:disabled,
+.post-footer button:disabled {
+  background-color: var(--grey);
+  cursor: not-allowed;
+  color: var(--black);
+}
+
+.post-footer nav {
+  display: none;
+}
+
+.content {
+  text-align: justify;
+}
+
+.content h3 {
+  text-align: left;
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+@media screen and (max-width: 800px) {
+  .post-header nav {
+    display: none;
+  }
+
+  .post-header h2 {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .content h3 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .post-footer nav {
+    display: flex;
+  }
+}
