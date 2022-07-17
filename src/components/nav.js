@@ -15,22 +15,22 @@ const Nav = ({ styleClassName, mobileMenu = false }) => {
     <nav className={styleClassName} style={mobileMenu ? mobileMenuStyle : {}}>
       <ul className={navList}>
         <li>
-          <Link to="/about" activeClassName={activeLink} activeStyle={activeLinkStyle}>
+          <Link to="/about" activeStyle={activeLinkStyle}>
             About
           </Link>
         </li>
         <li>
-          <Link to="/resume" activeClassName={activeLink} activeStyle={activeLinkStyle}>
+          <Link to="/resume" activeStyle={activeLinkStyle}>
             Resume
           </Link>
         </li>
         <li>
-          <Link to="/projects" activeClassName={activeLink} partiallyActive={true}>
+          <Link to="/projects" activeStyle={activeLinkStyle} partiallyActive={true}>
             Projects
           </Link>
         </li>
         <li>
-          <Link to="/blog" activeClassName={activeLink} partiallyActive={true}>
+          <Link to="/blog" activeStyle={activeLinkStyle} partiallyActive={true}>
             Blog
           </Link>
         </li>
