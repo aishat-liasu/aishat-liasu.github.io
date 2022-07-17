@@ -19,7 +19,7 @@ const Layout = ({ children, title = false, description = false, path = false, im
     if (mobileMenu) {
       setMenuSymbol(`\u2630`);
     } else {
-      setMenuSymbol(`\uD83D\uDDD9`);
+      setMenuSymbol(`\u2715`);
     }
     setMobileMenu(!mobileMenu);
   }
