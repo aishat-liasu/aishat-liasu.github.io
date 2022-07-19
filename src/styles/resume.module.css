@@ -1,0 +1,51 @@
+.resume-content {
+  display: grid;
+  grid-template-columns: minmax(300px, 500px) minmax(300px, 500px);
+  gap: 50px 50px;
+  align-items: start;
+  justify-items: center;
+  justify-content: center;
+  grid-template-areas:
+    'work education'
+    'skills skills';
+  margin-top: 50px;
+}
+
+.work {
+  grid-area: work;
+}
+
+.education {
+  grid-area: education;
+}
+
+.skills {
+  grid-area: skills;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  align-items: flex-start;
+}
+
+.skills li {
+  padding: 5px 10px;
+  margin: 0 10px 20px 0;
+  border: 1px solid var(--taupe);
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 850px) {
+  .resume-content {
+    display: block;
+  }
+
+  .resume-content section {
+    margin-bottom: 50px;
+  }
+}
