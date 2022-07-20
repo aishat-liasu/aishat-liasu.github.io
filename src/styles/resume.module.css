@@ -1,6 +1,6 @@
 .resume-content {
   display: grid;
-  grid-template-columns: minmax(300px, 500px) minmax(300px, 500px);
+  grid-template-columns: minmax(300px, 550px) minmax(300px, 550px);
   gap: 50px 50px;
   align-items: start;
   justify-items: center;
@@ -36,7 +36,7 @@
 .skills li {
   padding: 5px 10px;
   margin: 0 10px 20px 0;
-  border: 1px solid var(--taupe);
+  background-color: var(--taupe);
   border-radius: 5px;
 }
 

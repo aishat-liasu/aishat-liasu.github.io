@@ -16,7 +16,8 @@ const ResumePage = () => {
               Babban Gona | <span>August 2021 - Present</span>
             </p>
             <ul>
-              <li>Creating API endpoints consumed by mobile applications</li>
+              <li>Led of 2 interns from the creation to completion of backend API endpoints for a mobile app</li>
+              <li>Creating API endpoints consumed by mobile applications supporting the company's logistics</li>
               <li>Maintaining existing web applications using React and Redux</li>
               <li>Building web applications that monitor the company’s resources</li>
               <li>Building reusable React components to help speed up development time.</li>
@@ -65,12 +66,12 @@ const ResumePage = () => {
             </ul>
           </article>
           <article>
-            <h4>Bachelors of Science in Electrical & Electronics Engineering</h4>
+            <h4>BSc. in Electrical & Electronics Engineering</h4>
             <p>
               University of Lagos | <span>November 2014 - January 2020</span>
             </p>
             <ul>
-              <li>4.84/5.0 CGPA</li>
+              <li>First Class Honours- 4.84/5.0 CGPA</li>
               <li>
                 Relevant Coursework: Pure Mathematics, Applied Mathematics, Programming (C++), Logic Design and Digital System, Digital Computer
                 Design, Microcomputer Graphics, Microprocessors and Microcomputers
@@ -86,6 +87,7 @@ const ResumePage = () => {
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
+            <li>TypeScript</li>
             <li>React</li>
             <li>Redux</li>
             <li>Bootstrap</li>
@@ -96,6 +98,7 @@ const ResumePage = () => {
             <li>Express</li>
             <li>NodeJS</li>
             <li>TypeScript</li>
+            <li>Git</li>
             <li>Postman</li>
             <li>VS Code</li>
             <li>MySQL</li>
