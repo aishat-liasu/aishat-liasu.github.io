@@ -13,27 +13,22 @@
   justify-content: space-between;
   align-items: center;
   width: calc(100% - 22px);
+  height: max-content;
+}
+
+.hero-text-section {
+  margin-right: 30px;
 }
 
 .hero-text-section h2 {
   font-size: 20px;
   margin-bottom: 20px;
   font-weight: 500;
-  font-style: italic;
 }
 
 .hero-text-section h1 span {
   font-size: 20px;
   font-weight: 500;
-}
-
-.hero-text-section a {
-  text-decoration: none;
-  padding: 18px 30px;
-  border-radius: 10px;
-  background-color: var(--taupe);
-  color: var(--white);
-  cursor: pointer;
 }
 
 .hero-text-section button {
@@ -53,23 +48,41 @@
   background-color: var(--taupe);
   width: 400px;
   height: 400px;
-  padding: 20px;
 }
 
-.hero img {
+.hero-img-section img {
   object-fit: cover;
   border: 2px solid var(--taupe);
-  margin-right: -20px;
+  margin-left: 20px;
+  margin-top: 20px;
   width: 400px;
   min-height: 250px;
   max-height: 400px;
 }
 
-@media screen and (max-width: 900px) {
+@media (min-width: 751px) and (max-width: 900px) {
+  .hero-img-section {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero-img-section img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 750px) {
   .hero {
     flex-direction: column-reverse;
     width: 100%;
   }
+
+  .hero-text-section {
+    text-align: center;
+    margin: 0 auto;
+  }
+
   .hero-img-section {
     margin-bottom: 50px;
     width: fit-content;
@@ -78,11 +91,7 @@
     background-color: transparent;
   }
 
-  .hero-text-section {
-    text-align: center;
-  }
-
-  .hero img {
+  .hero-img-section img {
     width: 250px;
     height: 250px;
     margin: 0;
