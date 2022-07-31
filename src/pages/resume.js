@@ -6,7 +6,7 @@ const ResumePage = () => {
   return (
     <Layout title="Resume">
       <h2>Resume</h2>
-      <p>Here is a brief summary of my academic and work experience</p>
+      <p>Here is a summary of my academic and work experience</p>
       <div className={resumeContent}>
         <section className={work}>
           <h3>Work Experience</h3>
@@ -16,7 +16,7 @@ const ResumePage = () => {
               Babban Gona | <span>August 2021 - Present</span>
             </p>
             <ul>
-              <li>Led of 2 interns from the creation to completion of backend API endpoints for a mobile app</li>
+              <li>Led a team of 2 interns to create backend API endpoints from the creation to completion for a mobile app</li>
               <li>Creating API endpoints consumed by mobile applications supporting the company's logistics</li>
               <li>Maintaining existing web applications using React and Redux</li>
               <li>Building web applications that monitor the company’s resources</li>
@@ -71,7 +71,9 @@ const ResumePage = () => {
               University of Lagos | <span>November 2014 - January 2020</span>
             </p>
             <ul>
-              <li>First Class Honours- 4.84/5.0 CGPA</li>
+              <li>
+                First Class Honours - <b>4.84/5.0 CGPA</b>
+              </li>
               <li>
                 Relevant Coursework: Pure Mathematics, Applied Mathematics, Programming (C++), Logic Design and Digital System, Digital Computer
                 Design, Microcomputer Graphics, Microprocessors and Microcomputers
@@ -82,7 +84,7 @@ const ResumePage = () => {
 
         <section className={skills}>
           <h3>Skills</h3>
-          <p>Below is the list of technologies, tools and skills I have learnt and used over the last few years</p>
+          <p>Below is the list of technologies, and tools I have learnt and used over the last few years</p>
           <ul>
             <li>HTML</li>
             <li>CSS</li>
