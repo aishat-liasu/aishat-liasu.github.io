@@ -17,7 +17,7 @@ const ProjectsPage = () => {
     {
       frontmatter: {
         title: 'Portland to Portland',
-        description: 'A fully responsive website that shows an epic bicycle journey with portland',
+        description: 'A fully responsive website that shows an epic bicycle journey within portland',
         date: '2022-07-17T00:00:00.000Z',
       },
       id: '6801756b-0dee-5bf2-a359-f12465-878696',
