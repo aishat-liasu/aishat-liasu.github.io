@@ -12,7 +12,7 @@ const ProjectCard = ({ title, description, date, slug, id }) => {
       <article>
         <h3>{title}</h3>
         <p>{description}</p>
-        <Link to={slug.split('/').pop()}>Read More &#8594;</Link>
+        <Link to="#">Read More &#8594;</Link>
       </article>
     </li>
   );
