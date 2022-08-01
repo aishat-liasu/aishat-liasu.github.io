@@ -18,10 +18,10 @@ const IndexPage = () => {
             <span> My name is </span> <br /> Aishat Liasu
           </h1>
           <h2>I'm a Full Stack Web Developer && Software Engineer</h2>
-          <button onClick={showAboutPage}>More about me</button>
+          <button onClick={showAboutPage}>About me</button>
         </section>
         <section className={heroImgSection}>
-          <img src={aishat_liasu} alt="A selfie of Aishat somewhere in a Mosque at Ikeja, Lagos" />
+          <img src={aishat_liasu} alt="A masked selfie of Aishat somewhere in a Mosque at Ikeja, Lagos" />
         </section>
       </div>
     </Layout>
