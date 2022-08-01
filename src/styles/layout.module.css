@@ -8,6 +8,10 @@
 }
 
 .header-logo {
+  /*   background-image: url('../images/aishat_logo.svg');
+  width: 146px;
+  height: 61px;
+  color: var(--white); */
 }
 
 .header-logo a {
