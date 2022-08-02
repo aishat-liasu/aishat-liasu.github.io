@@ -1,3 +1,11 @@
+.project-card:hover {
+  cursor: pointer;
+}
+
+.project-card:hover a {
+  text-decoration: underline var(--white) solid 1px;
+}
+
 .project-card div {
   padding: 10px;
   display: flex;
