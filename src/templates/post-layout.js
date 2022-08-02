@@ -3,7 +3,7 @@ import Layout from '../components/layout';
 import NavButton from '../components/nav-button';
 import { Link, graphql, navigate } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { postHeader, postFooter, content } from '../styles/post-layout.module.css';
+import { postPage, postHeader, postFooter, content } from '../styles/post-layout.module.css';
 
 export const postsData = graphql`
   query GetCurrentPostAndAllPosts($slug: String) {
@@ -40,19 +40,21 @@ const PostLayout = ({ data }) => {
 
   return (
     <Layout title={title} description={description}>
-      <header className={postHeader}>
-        <h2>
-          <Link to="/blog"> Blog</Link> &gt; {title}
-        </h2>
-        <NavButton currentIndex={currentPostIndex} total={numOfPosts} list={posts} />
-      </header>
-      <section className={content}>
-        <MDXRenderer>{currentPostData.body}</MDXRenderer>
-      </section>
+      <section className={postPage}>
+        <header className={postHeader}>
+          <h2>
+            <Link to="/blog"> Blog</Link> &gt; {title}
+          </h2>
+          <NavButton currentIndex={currentPostIndex} total={numOfPosts} list={posts} />
+        </header>
+        <section className={content}>
+          <MDXRenderer>{currentPostData.body}</MDXRenderer>
+        </section>
 
-      <footer className={postFooter}>
-        <NavButton currentIndex={currentPostIndex} total={numOfPosts} list={posts} />
-      </footer>
+        <footer className={postFooter}>
+          <NavButton currentIndex={currentPostIndex} total={numOfPosts} list={posts} />
+        </footer>
+      </section>
     </Layout>
   );
 };

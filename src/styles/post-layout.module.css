@@ -1,3 +1,8 @@
+.post-page {
+  max-width: 900px;
+  margin: auto;
+}
+
 .post-header {
   display: flex;
   justify-content: space-between;
@@ -71,6 +76,12 @@
   text-align: left;
   font-size: 32px;
   margin-bottom: 32px;
+}
+
+.content a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--white);
 }
 
 @media screen and (max-width: 800px) {
