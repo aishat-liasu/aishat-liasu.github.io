@@ -1,11 +1,21 @@
 .blog-post {
   display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--taupe);
 }
 
-.blog-post article {
+.blog-post:hover {
+  cursor: pointer;
+}
+
+.blog-post:hover a {
+  text-decoration: underline var(--white) solid 1px;
+}
+
+/* .blog-post article {
   margin-left: 50px;
   max-width: 600px;
-}
+} */
 
 .blog-post a {
   text-decoration: none;
@@ -18,13 +28,13 @@
 }
 
 @media screen and (max-width: 800px) {
-  .blog-post {
+  /*   .blog-post {
     flex-direction: column;
   }
   .blog-post img {
     width: 280px;
-  }
+  } 
   .blog-post article {
     margin: 50px 0;
-  }
+  }*/
 }
