@@ -1,3 +1,8 @@
+.blog-page {
+  max-width: 900px;
+  margin: auto;
+}
+
 .blog-posts {
   list-style: none;
   margin: 100px 0 0;
@@ -6,6 +11,7 @@
 
 .blog-posts li {
   padding: 0;
+  padding-bottom: 25px;
   margin-bottom: 50px;
 }
 
