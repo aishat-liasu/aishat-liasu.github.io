@@ -1,6 +1,11 @@
+.resume-page {
+  max-width: 900px;
+  margin: auto;
+}
+
 .resume-content {
   display: grid;
-  grid-template-columns: minmax(300px, 550px) minmax(300px, 550px);
+  grid-template-columns: minmax(300px, 425px) minmax(300px, 425px);
   gap: 50px 50px;
   align-items: start;
   justify-items: center;
@@ -9,6 +14,15 @@
     'work education'
     'skills skills';
   margin-top: 50px;
+}
+
+.resume-content article {
+  margin-bottom: 25px;
+}
+
+.resume-content ul {
+  padding-left: 8px;
+  margin: 10px 0 0 10px;
 }
 
 .work {
