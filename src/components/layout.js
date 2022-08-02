@@ -1,17 +1,13 @@
 import * as React from 'react';
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 
-import { header, headerLogo, nav, main, activeLink, navList, menuButton, navMobile } from '../styles/layout.module.css';
+import { header, headerLogo, nav, main, menuButton, navMobile } from '../styles/layout.module.css';
 import '../styles/global.css';
 import Nav from './nav.js';
 
 const Layout = ({ children, title = false, description = false, path = false, image = false }) => {
   const [mobileMenu, setMobileMenu] = React.useState(false);
   const [menuSymbol, setMenuSymbol] = React.useState(`\u2630`);
-
-  const mobileMenuStyle = {
-    display: 'block',
-  };
 
   function openMobileMenu(e) {
     e.preventDefault();
@@ -24,11 +20,15 @@ const Layout = ({ children, title = false, description = false, path = false, im
     setMobileMenu(!mobileMenu);
   }
 
+  function showHomePage() {
+    navigate('/');
+  }
+
   return (
     <>
       <header className={header}>
-        <div className={headerLogo}>
-          <Link to="/">Aishat</Link>
+        <div className={headerLogo} onClick={showHomePage}>
+          {/* <Link to="/">Aishat</Link> */}
         </div>
 
         {/*         <nav className={nav}>
@@ -80,8 +80,10 @@ const Layout = ({ children, title = false, description = false, path = false, im
             </li>
           </ul>
         </nav> */}
+
         <Nav styleClassName={nav} />
         <Nav styleClassName={navMobile} mobileMenu={mobileMenu} />
+
         <button className={menuButton} onClick={openMobileMenu}>
           {menuSymbol}
         </button>

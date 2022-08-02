@@ -8,10 +8,11 @@
 }
 
 .header-logo {
-  /*   background-image: url('../images/aishat_logo.svg');
-  width: 146px;
-  height: 61px;
-  color: var(--white); */
+  background-image: url('../images/aishat_liasu_white.svg');
+  width: 80px;
+  height: 60px;
+  color: var(--white);
+  cursor: pointer;
 }
 
 .header-logo a {
@@ -23,7 +24,9 @@
 }
 
 .nav {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  min-width: 45%;
 }
 
 .nav-mobile {
@@ -89,10 +92,14 @@
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto;
     z-index: 2;
     text-align: center;
     display: none;
+    background-color: var(--taupe);
+    margin: 10px auto;
+    border-radius: 10px;
+    height: 250px;
+    max-width: 300px;
   }
 
   /*   .nav-mobile .nav-list {
