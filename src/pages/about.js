@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Layout from '../components/layout';
-import { aboutPage, content } from '../styles/about.module.css';
+import { aboutPage, content, bold } from '../styles/about.module.css';
 
 const AboutPage = () => {
   return (
@@ -18,15 +18,15 @@ const AboutPage = () => {
           <p>
             I love how technology is revolutionising the way we live, work and socialize. With just a mobile phone and perhaps internet coverage we
             can communicate with almost anyone in every part of the world. With applications like Slack and GitHub, several organisations are able to
-            maintain a global workforce increasing diversity in these companies. On platforms like Duolingo and YouTube, over a million people have
-            learnt new languages or learnt a skill, forever changing the way we learn. All of this is possible because of human ingenuity and the
-            proper utilization of existing technologies.
+            maintain a globally diverse workforce. On platforms like Duolingo and YouTube, over a million people have learnt new languages or learnt a
+            skill, forever changing the way we learn. All of this is possible because of human ingenuity and the proper utilization of existing
+            technologies.
           </p>
           <p>
             In case I haven’t been specific, I love technology, most especially what can be done using technology. Currently, I am finding my own way
             to contribute positively and meaningfully to the world with the help of technology.
           </p>
-          <p>I guess a better summary would be: </p>
+          <p className={bold}>I guess a better summary would be: </p>
           <p>
             I am a problem solver seeking to solve problems through human creativity and by properly utilising technology. I am a software engineer
             with over 1 year of experience building enterprise software solutions using agile methodologies. I have also had the opportunity to work

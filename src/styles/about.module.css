@@ -6,3 +6,7 @@
 .content {
   text-align: justify;
 }
+
+.bold {
+  font-weight: 700;
+}
