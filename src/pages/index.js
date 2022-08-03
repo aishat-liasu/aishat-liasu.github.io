@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { list, listItem, hero, heroImgSection, heroTextSection } from '../styles/index.module.css';
+import { hero, heroImgSection, heroTextSection } from '../styles/index.module.css';
 import Layout from '../components/layout';
 import { navigate } from 'gatsby';
-import aishat_liasu from '../images/aishat_liasu.jpg';
+import aishat_liasu from '../images/aishat_liasu.png';
 
 const IndexPage = () => {
   function showAboutPage(e) {
@@ -17,7 +17,7 @@ const IndexPage = () => {
           <h1>
             <span> My name is </span> <br /> Aishat Liasu
           </h1>
-          <h2>I'm a Full Stack Web Developer && Software Engineer</h2>
+          <h2>I'm a Full Stack Web Developer and Software Engineer</h2>
           <button onClick={showAboutPage}>About me</button>
         </section>
         <section className={heroImgSection}>

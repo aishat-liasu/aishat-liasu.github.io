@@ -1,13 +1,3 @@
-.list {
-  margin: 0;
-}
-
-.list-item {
-  margin: 0;
-  padding: 0;
-  accent-color: var(--dustypink);
-}
-
 .hero {
   display: flex;
   justify-content: space-between;
