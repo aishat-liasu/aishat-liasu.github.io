@@ -1,7 +1,9 @@
 import * as React from 'react';
-import { hero, heroImgSection, heroTextSection } from '../styles/index.module.css';
-import Layout from '../components/layout';
 import { navigate } from 'gatsby';
+
+import Layout from '../components/layout';
+
+import { hero, heroImgSection, heroTextSection } from '../styles/index.module.css';
 import aishat_liasu from '../images/aishat_liasu.png';
 
 const IndexPage = () => {
@@ -11,7 +13,7 @@ const IndexPage = () => {
   }
 
   return (
-    <Layout title="Home Page">
+    <Layout>
       <div className={hero}>
         <section className={heroTextSection}>
           <h1>
