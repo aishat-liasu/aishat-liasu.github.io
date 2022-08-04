@@ -8,19 +8,10 @@
 }
 
 .header-logo {
-  background-image: url('../images/aishat_liasu_white.svg');
-  width: 80px;
+  background-image: url('../images/AishatLiasu.svg');
+  width: 100px;
   height: 60px;
-  color: var(--white);
   cursor: pointer;
-}
-
-.header-logo a {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: var(--white);
-  font-size: 24px;
 }
 
 .nav {
@@ -33,34 +24,9 @@
   display: none;
 }
 
-/* .nav-list {
-  display: flex;
-  justify-content: space-between;
-  min-width: 30%;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-list a {
-  text-decoration: none;
-  padding: 10px;
-  font-weight: 400;
-  color: var(--white);
-}
-
-.nav-list a:hover {
-  font-weight: 700;
-} */
-
 .main {
   margin: 150px auto 50px;
   max-width: 1200px;
-}
-
-.active-link {
-  font-weight: 700;
-  border-bottom: '3px solid var(--dustypink)';
 }
 
 .menu-button {
@@ -101,21 +67,6 @@
     height: 250px;
     max-width: 320px;
   }
-
-  /*   .nav-mobile .nav-list {
-    flex-direction: column;
-    justify-content: center;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: var(--dustypink);
-    color: var(--black);
-    width: 300px;
-    margin: 50px auto;
-  }
-
-  .nav-mobile .nav-list li {
-    text-align: center;
-  } */
 
   .menu-button {
     display: block;
