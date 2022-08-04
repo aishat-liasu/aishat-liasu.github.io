@@ -1,9 +1,13 @@
 import * as React from 'react';
-import { Link, navigate } from 'gatsby';
+import { navigate } from 'gatsby';
 
+//import styles
 import { header, headerLogo, nav, main, menuButton, navMobile } from '../styles/layout.module.css';
 import '../styles/global.css';
+
+//import components
 import Nav from './nav.js';
+import SeoComponent from './seo';
 
 const Layout = ({ children, title = false, description = false, path = false, image = false }) => {
   const [mobileMenu, setMobileMenu] = React.useState(false);
@@ -13,8 +17,10 @@ const Layout = ({ children, title = false, description = false, path = false, im
     e.preventDefault();
 
     if (mobileMenu) {
+      //set back to menu icon
       setMenuSymbol(`\u2630`);
     } else {
+      //set menu to cancel symbol
       setMenuSymbol(`\u2715`);
     }
     setMobileMenu(!mobileMenu);
@@ -26,60 +32,9 @@ const Layout = ({ children, title = false, description = false, path = false, im
 
   return (
     <>
+      <SeoComponent title={title} description={description} path={path} image={image} />
       <header className={header}>
-        <div className={headerLogo} onClick={showHomePage}>
-          {/* <Link to="/">Aishat</Link> */}
-        </div>
-
-        {/*         <nav className={nav}>
-          <ul className={navList}>
-            <li>
-              <Link to="/about" activeClassName={activeLink}>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="/resume" activeClassName={activeLink}>
-                Resume
-              </Link>
-            </li>
-            <li>
-              <Link to="/projects" activeClassName={activeLink} partiallyActive={true}>
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link to="/blog" activeClassName={activeLink} partiallyActive={true}>
-                Blog
-              </Link>
-            </li>
-          </ul>
-        </nav> */}
-
-        {/*         <nav className={navMobile} style={mobileMenu ? mobileMenuStyle: {}}>
-          <ul className={navList}>
-            <li>
-              <Link to="/about" activeClassName={activeLink}>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="/resume" activeClassName={activeLink}>
-                Resume
-              </Link>
-            </li>
-            <li>
-              <Link to="/projects" activeClassName={activeLink} partiallyActive={true}>
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link to="/blog" activeClassName={activeLink} partiallyActive={true}>
-                Blog
-              </Link>
-            </li>
-          </ul>
-        </nav> */}
+        <div className={headerLogo} onClick={showHomePage}></div>
 
         <Nav styleClassName={nav} />
         <Nav styleClassName={navMobile} mobileMenu={mobileMenu} />
