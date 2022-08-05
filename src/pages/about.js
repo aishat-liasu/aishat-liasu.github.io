@@ -29,8 +29,8 @@ const AboutPage = () => {
           <p className={bold}>I guess a better summary would be: </p>
           <p>
             I am a problem solver seeking to solve problems through human creativity and by properly utilising technology. I am a software engineer
-            with over 1 year of experience building enterprise software solutions using agile methodologies. I have also had the opportunity to work
-            and learn from both senior and junior developers to develop business solutions from inception to completion.
+            with experience building enterprise software solutions using agile methodologies. I have also had the opportunity to work and learn from
+            both senior and junior developers to develop business solutions from inception to completion.
           </p>
           <p>
             I always try to improve my skills and learn new skills either by discussing with fellow engineers to go over my understanding, taking
