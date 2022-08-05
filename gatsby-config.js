@@ -2,8 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Aishat Liasu - Full Stack Web Developer`,
     siteUrl: `https://aishatliasu.com`,
-    description: 'Aishat Liasu - Full Stack Web Developer',
-    image: `${__dirname}/src/images/myoctocat.png`,
+    description: 'I am a problem solver seeking to solve problems through human creativity and by properly utilising technology',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
