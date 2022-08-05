@@ -9,7 +9,6 @@ const SeoComponent = (props) => {
       site {
         siteMetadata {
           description
-          image
           siteUrl
           title
         }
@@ -20,7 +19,7 @@ const SeoComponent = (props) => {
   const defaults = data?.site?.siteMetadata ?? {};
   const title = props.title || defaults.title;
   const description = props.description || defaults.description;
-  const image = new URL(props.image || defaults.image);
+  const image = new URL(props.image);
   const url = new URL(props.path || '/', defaults.siteUrl);
 
   return (
