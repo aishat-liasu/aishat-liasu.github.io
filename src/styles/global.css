@@ -10,6 +10,7 @@
   --ebony: #646f58;
   --turquiose: #b8e2c8;
   --lightgreen: #70a37f;
+  --mintgreen: #c2f9bb;
   --dustypink: #aa818b;
   --taupe: #865b66;
   --darktaupe: #6d4a53;
@@ -24,9 +25,9 @@ body {
   background-color: var(--bluish);
   color: var(--white);
   font-size: 16px;
-  line-height: 1.25;
+  line-height: 1.5;
   font-weight: normal;
-  font-family: Inter, 'Courier New', monospace;
+  font-family: Inter, 'Segoe UI', monospace;
 }
 
 body {
