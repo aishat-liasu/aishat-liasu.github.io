@@ -23,7 +23,7 @@ module.exports = {
         description: `Aishat Liasu's Portfolio Website`,
         lang: `en`,
         start_url: `/`,
-        icon: 'src/images/myoctocat.png',
+        icon: 'src/images/aishat_liasu.png',
       },
     },
   ],
