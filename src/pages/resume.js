@@ -18,10 +18,10 @@ const ResumePage = () => {
               </p>
               <ul>
                 <li>Led a team of 2 interns to create backend API endpoints from the creation to completion for a mobile app</li>
-                <li>Creating API endpoints consumed by mobile applications supporting the company's logistics</li>
-                <li>Maintaining existing web applications using React and Redux</li>
+                <li>Building API endpoints to enable mobile applications to interact with the database server using NodeJS, Express and TypeScript</li>
+                <li>Maintaining existing web applications using React and CSS</li>
+                <li>Building reusable React components to help speed up development time</li>
                 <li>Building web applications that monitor the company’s resources</li>
-                <li>Building reusable React components to help speed up development time.</li>
               </ul>
             </article>
 
@@ -32,11 +32,10 @@ const ResumePage = () => {
               </p>
               <ul>
                 <li>
-                  Worked with other software engineers to build a web application that automates new employees’ registration process, reducing the
-                  time from 10 minutes to less than a minute.
+                Worked as a frontend engineer with a backend engineer to build a web application that automates new employees’ registration process, reducing the time spent from 10 minutes to less than a minute.
                 </li>
-                <li>Built web applications using React and Redux</li>
-                <li>Built the company’s website using HTML, CSS and WordPress</li>
+                <li>Built web applications using React and CSS</li>
+                <li>Worked with another software engineer intern to build the company’s website using HTML, CSS and WordPress</li>
                 <li>Maintained the company’s website to enable a good user experience and disseminate new content</li>
               </ul>
             </article>
