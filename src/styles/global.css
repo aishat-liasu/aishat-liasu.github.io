@@ -2,7 +2,7 @@
 
 :root {
   --black: #000;
-  --blackish: #393e41;
+  --blackish: #2a2c2f;
   --bluish: #393e41;
   --greenish: #243010;
   --white: #fff;
@@ -22,7 +22,7 @@
 
 html,
 body {
-  background-color: var(--bluish);
+  background-color: var(--blackish);
   color: var(--white);
   font-size: 16px;
   line-height: 1.5;
