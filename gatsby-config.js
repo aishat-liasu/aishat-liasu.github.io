@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Aishat Liasu - Full Stack Web Developer`,
-    siteUrl: `https://aishatliasu.com`,
-    description: 'I am a problem solver seeking to solve problems through human creativity and by properly utilising technology',
+    title: `Aishat Liasu - Software Engineer`,
+    siteUrl: `https://aishat-liasu.github.io`,
+    description: 'I am a software engineer with a passion for building solutions by utilizing human creativity and technology',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -18,7 +18,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `Aishat Liasu - Full Stack Web Developer`,
+        name: `Aishat Liasu - Software Engineer`,
         short_name: `Aishat Liasu`,
         description: `Aishat Liasu's Portfolio Website`,
         lang: `en`,
