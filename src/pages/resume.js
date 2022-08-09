@@ -17,11 +17,11 @@ const ResumePage = () => {
                 Babban Gona | <span>August 2021 - Present</span>
               </p>
               <ul>
-                <li>Led a team of 2 interns to create backend API endpoints from the creation to completion for a mobile app</li>
-                <li>Building API endpoints to enable mobile applications to interact with the database server using NodeJS, Express and TypeScript</li>
+                <li>Coached 2 interns to develop backend API endpoints from ideation to product for a mobile app</li>
+                <li>Built API endpoints to enable mobile applications to interact with the database server using NodeJS, Express and TypeScript</li>
                 <li>Maintaining existing web applications using React and CSS</li>
-                <li>Building reusable React components to help speed up development time</li>
-                <li>Building web applications that monitor the company’s resources</li>
+                <li>Built reusable React components to help speed up development time</li>
+                <li>Built web applications that monitor the company’s resources</li>
               </ul>
             </article>
 
