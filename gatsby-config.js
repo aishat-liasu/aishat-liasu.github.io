@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Aishat Liasu - Software Engineer`,
     siteUrl: `https://aishat-liasu.github.io`,
-    description: 'I am a software engineer with a passion for building solutions by utilizing human creativity and technology',
+    description: 'I am a software engineer passionate about building solutions using human creativity and technology',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
