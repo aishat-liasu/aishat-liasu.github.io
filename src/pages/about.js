@@ -16,10 +16,10 @@ const AboutPage = () => {
             <sub>2</sub>, or less effort.
           </p>
           <p>
-            I love how technology is revolutionising the way we live, work and socialize. With just a mobile phone and perhaps internet coverage we
+            I love how technology is revolutionising how we live, work and socialise. With just a mobile phone and perhaps internet coverage, we
             can communicate with almost anyone in every part of the world. With applications like Slack and GitHub, several organisations are able to
             maintain a global workforce increasing diversity in these organizations. On platforms like Duolingo and YouTube, over a million people have learnt new languages or
-            skills, forever changing the way we learn. All of these are possible because of human ingenuity and the proper utilization of
+            skills, forever changing the way we learn. All of these are possible because of human ingenuity and the proper utilisation of
             technologies.
           </p>
           <p>
@@ -29,13 +29,12 @@ const AboutPage = () => {
           <p className={bold}>I guess a better summary would be: </p>
           <p>
             I am a problem solver seeking to solve problems through human creativity and by properly utilising technology. I am a software engineer
-            with experience in building enterprise software solutions using agile methodologies. I have also had the opportunity to work and learn from
-            both senior and junior developers to develop business solutions from inception to completion.
+            with experience building enterprise software solutions using agile methodologies. I have also had the opportunity to work and learn from senior and junior developers to develop business solutions from inception to completion.
           </p>
           <p>
             I always try to improve my skills and learn new skills either by discussing with fellow engineers to go over my understanding, taking
             online courses, reading articles, or reading documentation. At the moment, I am also trying to write as a way of cementing my
-            understanding.
+            knowledge.
           </p>
         </div>
       </section>
