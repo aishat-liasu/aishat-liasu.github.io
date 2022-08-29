@@ -3,8 +3,10 @@ import Layout from '../components/layout';
 import ProjectCard from '../components/project-card';
 import { projectsPage, projectList } from '../styles/projects.module.css';
 
+import { graphql, useStaticQuery } from 'gatsby';
+
 const ProjectsPage = () => {
-  const projects = [
+  const projects_1 = [
     {
       frontmatter: {
         title: 'Fyurr Web App',
@@ -24,6 +26,26 @@ const ProjectsPage = () => {
       slug: 'project/portland-to-portland',
     },
   ];
+
+  const data = useStaticQuery(graphql`
+    query GetProjects {
+      allMdx(sort: { fields: frontmatter___date, order: DESC }
+        filter: {slug: {glob: "*projects/*"}}) {
+        nodes {
+          frontmatter {
+            date(formatString: "MMMM D, YYYY", fromNow: true)
+            description
+            title
+            image
+          }
+          id
+          slug
+        }
+      }
+    }
+  `);
+
+const projects = data?.allMdx?.nodes ?? [];
 
   return (
     <Layout title="Projects">
