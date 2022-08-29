@@ -2,8 +2,9 @@ import * as React from 'react';
 import { Link, navigate } from 'gatsby';
 import { projectCard } from '../styles/project-card.module.css';
 
-const ProjectCard = ({ title, description, date, slug, id }) => {
-  const projectLink = '#';
+const ProjectCard = ({ title, description, date, slug, id, image }) => {
+  const projectLink = slug.split('/').pop() || '#';
+  const imageSrc = image || '../'
 
   function showProjectPage() {
     navigate(projectLink);
@@ -12,7 +13,7 @@ const ProjectCard = ({ title, description, date, slug, id }) => {
   return (
     <li className={projectCard} onClick={showProjectPage}>
       <div>
-        <img src="../" alt="Something about the project in question" />
+        <img src={imageSrc} alt="Something about the project in question" />
       </div>
 
       <article>
