@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Aishat Liasu - Software Engineer`,
-    siteUrl: `https://aishat-liasu.github.io`,
+    siteUrl: `https://aishatliasu.com`,
     description: 'I am a software engineer passionate about building solutions using human creativity and technology',
   },
   plugins: [
@@ -10,10 +10,10 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'posts',
-        path: `${__dirname}/src/posts`,
+        name: 'content',
+        path: `${__dirname}/src/content`,
       },
-      __key: 'posts',
+      __key: 'content',
     },
     {
       resolve: 'gatsby-plugin-manifest',
