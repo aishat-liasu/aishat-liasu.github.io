@@ -1,10 +1,12 @@
 import * as React from 'react';
 import { Link, navigate } from 'gatsby';
 import { projectCard } from '../styles/project-card.module.css';
+import { GatsbyImage } from "gatsby-plugin-image"
 
-const ProjectCard = ({ title, description, date, slug, id, image }) => {
+const ProjectCard = ({ title, description, date, slug, id, featuredImage }) => {
   const projectLink = slug.split('/').pop() || '#';
-  const imageSrc = image || '../'
+
+  const imageSrc = featuredImage? featuredImage.childImageSharp.gatsbyImageData : '../'
 
   function showProjectPage() {
     navigate(projectLink);
@@ -12,8 +14,9 @@ const ProjectCard = ({ title, description, date, slug, id, image }) => {
 
   return (
     <li className={projectCard} onClick={showProjectPage}>
+
       <div>
-        <img src={imageSrc} alt="Something about the project in question" />
+        <GatsbyImage image={imageSrc} alt={title}/>
       </div>
 
       <article>
