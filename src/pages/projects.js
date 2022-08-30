@@ -36,7 +36,12 @@ const ProjectsPage = () => {
             date(formatString: "MMMM D, YYYY", fromNow: true)
             description
             title
-            image
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData(placeholder: DOMINANT_COLOR)
+              }
+            }
+            
           }
           id
           slug
