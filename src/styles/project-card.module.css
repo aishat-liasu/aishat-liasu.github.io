@@ -9,17 +9,18 @@
 .project-card div {
   padding: 10px;
   display: flex;
-  width: 100%;
+  /* width: 100%; */
   background-color: var(--taupe);
   border-radius: 10px;
   margin-bottom: 20px;
+  align-items: center;
 }
 
 .project-card img {
   min-width: 260px;
-  min-height: 200px;
+  min-height: 100px;
   width: 100%;
-  border: '1px solid white';
+  margin: auto;
 }
 
 .project-card a {
