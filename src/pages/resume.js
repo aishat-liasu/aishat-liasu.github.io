@@ -17,11 +17,10 @@ const ResumePage = () => {
                 Babban Gona | <span>August 2021 - Present</span>
               </p>
               <ul>
-                <li>Trained 2 interns to develop backend API endpoints from ideation to product for a mobile app</li>
-                <li>Built API endpoints to enable mobile applications to interact with the database server using NodeJS, Express and TypeScript</li>
-                <li>Maintaining existing web applications using React and CSS</li>
+                <li>Developing the enterprise backend systems to serve over 200,000 farmers by 2022</li>
+                <li>Training junior engineers to develop backend API endpoints from ideation to product</li>
+                <li>Collaborated with other engineers to implement a RESTful service API that helped distribute farming inputs to over 30,000 farmers working with the company</li>
                 <li>Built reusable React components to help speed up development time</li>
-                <li>Built web applications that monitor the company’s resources</li>
               </ul>
             </article>
 
@@ -31,11 +30,8 @@ const ResumePage = () => {
                 Babban Gona | <span>February 2021 - July 2021</span>
               </p>
               <ul>
-                <li>
-                Worked as a frontend engineer with a backend engineer to build a web application that automates new employees’ registration process, reducing the time spent from 10 minutes to less than a minute.
-                </li>
-                <li>Built web applications using React and CSS</li>
-                <li>Worked with another software engineer intern to build the company’s website using HTML, CSS and WordPress</li>
+                <li>Collaborated with the product team and a backend engineer to build an internal web application that automates the registration process for new employees and controls over 500 employees’ access to other internal applications</li>
+                <li>Worked with another intern to build the company’s website using HTML, CSS and WordPress</li>
                 <li>Maintained the company’s website to enable a good user experience and disseminate new content</li>
               </ul>
             </article>
@@ -46,13 +42,15 @@ const ResumePage = () => {
             <article>
               <h4>Full Stack Web Developer Nanodegree</h4>
               <p>
-                Udacity | <span>May 2022 - In Progess</span>
+                Udacity | <span>May 2022 - September 2022</span>
               </p>
               <ul>
                 <li>Python</li>
                 <li>Flask</li>
                 <li>PostgreSQL</li>
                 <li>SQLAlchemy</li>
+                <li>Docker</li>
+                <li>Deployment on AWS</li>
               </ul>
             </article>
             <article>
@@ -95,7 +93,8 @@ const ResumePage = () => {
               <li>Bootstrap</li>
               <li>WordPress</li>
               <li>SQL</li>
-              <li>PostreSQL</li>
+              <li>PostgreSQL</li>
+              <li>MySQL</li>
               <li>Python</li>
               <li>Express</li>
               <li>NodeJS</li>
@@ -103,8 +102,8 @@ const ResumePage = () => {
               <li>Git</li>
               <li>Postman</li>
               <li>VS Code</li>
-              <li>MySQL</li>
               <li>pgAdmin</li>
+              <li>Jira</li>
             </ul>
           </section>
         </div>
