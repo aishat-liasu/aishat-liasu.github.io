@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link, navigate } from 'gatsby';
-import { projectCard } from '../styles/project-card.module.css';
+import { projectCard, imgContainer } from '../styles/project-card.module.css';
 import { GatsbyImage } from "gatsby-plugin-image"
 
 const ProjectCard = ({ title, description, date, slug, id, featuredImage }) => {
@@ -15,7 +15,7 @@ const ProjectCard = ({ title, description, date, slug, id, featuredImage }) => {
   return (
     <li className={projectCard} onClick={showProjectPage}>
 
-      <div>
+      <div className={imgContainer}>
         <GatsbyImage image={imageSrc} alt={title}/>
       </div>
 

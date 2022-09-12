@@ -6,8 +6,8 @@
   text-decoration: underline var(--white) solid 1px;
 }
 
-.project-card div {
-  padding: 10px;
+.img-container {
+  padding: 20px 10px;
   display: flex;
   /* width: 100%; */
   background-color: var(--taupe);
@@ -19,7 +19,6 @@
 .project-card img {
   min-width: 260px;
   min-height: 100px;
-  width: 100%;
   margin: auto;
 }
 
