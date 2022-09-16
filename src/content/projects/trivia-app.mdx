@@ -2,11 +2,68 @@
 date: 2022-08-28
 title: "Trivia App"
 description: "This is a full stack responsive web app that allows a user to add new questions to the application, play a mini quiz game based on selected category, and displays the final score to the user"
-featuredImage: '../../images/trivia-desktop-view.png'
+featuredImage: '../../images/01_trivia_project_home_page.png'
 ---
+
+import ProjectParam from '../../components/project-param.js'
 
 ### Trivia App
 
-This is an application I built to hone my API creation skills using Flask and Python. This is also the second project I submitted as part of my Udacity Full Stack Web Developer Nanodegree. As a full stack application it consists of both frontend and backend. 
+This is an application I built to review my understanding of RESTful API service. This is also the second project I completed as part of my Udacity Full Stack Web Developer Nanodegree. As a full-stack application, it consists of both the frontend and backend. The starter folder for the project included all the assets required for the UI of the frontend view and the logic for rendering each page.
 
-![Trivia Desktop View](../../images/trivia-desktop-view.png)
+<ProjectParam techStack={["Python", "Flask", "PostgreSQL", "React", "CSS"]} gitHubRepo='https://github.com/aishat-liasu/trivia-app' />
+
+![Trivia Desktop View](../../images/01_trivia_project_home_page.png)
+<span>Desktop view of the Trivia App</span>
+
+#### Frontend
+The tech stack used for the front end was React (Class-based Components), jQuery and CSS. As most of the logic for rendering the pages had been implemented, I decided to improve upon it by:
+
+1. Changing the tags for most elements to appropriate semantic tags, such as replacing the button elements with `button` tags, the list elements, and its items respectively with `ul` and `li` tags, and using `section`, `article` and `details` tags where appropriate
+2. Making the background colour of the navigation link of a page a shade of purple when a user navigates to the page for a better user experience
+3. Making the pages responsive for most screen sizes
+4. Adding a Popup Component to show up whenever an error occurs
+
+![When a user wants to view the answer](../../images/01_trivia_project_home_page_answer_display.png)
+<span>When the answer details is clicked</span>
+
+![Mobile view of Trivia App](../../images/01_trivia_project_home_page_mobile.png)
+<span>Mobile view of the Trivia App</span>
+
+![The Add New Question Page of the Trivia App](../../images/02_trivia_project_add_page.png)
+<span>Add Page</span>
+
+![The view when error occurs on the Add New Question Page of the Trivia App](../../images/02_trivia_project_add_page_popup.png)
+<span>Error on Add Page</span>
+
+
+#### Backend  
+The tech stack used for the backend was Python, Flask, and PostgreSQL. The main features of the application are listed below:
+1.	Displaying questions and answers to a user on the home page in paginated form
+2.	Filtering questions by categories 
+3.	Searching for questions using the search bar
+4.	Creating new questions
+5.	Deleting questions
+6.	Playing the quiz
+
+A whole of 6 endpoints was created, 
+
+1.	To get all questions with a page query to get a list of paginated questions in groups of 10
+2.	To create a new question
+3.	To get all categories
+4.	To get a filtered list of questions using the inputted text in the search bar as a filter
+5.	To get a list of paginated questions per category in groups of 10
+6.	To get a random list of questions either based on one category or all categories
+
+![Pagination Component](../../images/01_trivia_project_pagination_component.png)
+<span>The pagination section</span>
+
+![The Quiz Page of the Trivia App](../../images/03_trivia_project_quiz_page.png)
+<span>Quiz Page</span>
+
+![The view when a user inputs a correct answer on the Quiz Page of the Trivia App](../../images/03_trivia_project_quiz_page_correct_answer.png)
+<span>When a user inputs a correct answer on the Quiz Page</span>
+
+![The view when a user inputs an incorrect answer on the Quiz Page of the Trivia App](../../images/03_trivia_project_quiz_page_wrong_answer.png)
+<span>When a user inputs a wrong answer on the Quiz Page</span>
+
