@@ -77,16 +77,48 @@
     font-size: 32px;
     margin-bottom: 32px;
   }
+
+  .content h4 {
+    margin-top: 20px;
+  }
   
   .content a {
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--white);
+    cursor: pointer;
   }
 
-  .content img {
-    border: 1px solid var(--taupe);
+  .content a:hover {
+    text-decoration: underline;
+  }
+
+  .content p {
+    margin-bottom: 0;
+  }
+
+  .content p span img {
     border-radius: 10px;
+    border: 1px solid var(--taupe);
+  }
+
+  .content p span span {
+    margin-top: 40px;
+  }
+
+  .content p ~ span {
+    font-size: 14px;
+  }
+
+  .content li code {
+    background-color: black;
+    padding: 2px 5px;
+    border-radius: 3px;
+  }
+
+  .content ol {
+    padding-left: 8px;
+    margin: 15px 0 0 15px;
   }
   
   @media screen and (max-width: 800px) {
