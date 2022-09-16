@@ -1,0 +1,30 @@
+.project-param {
+    display: flex;
+    /* justify-content: space-evenly; */
+}
+
+.project-param article {
+    min-width: 30%;
+}
+
+.project-param article h4 {
+    font-size: 16px;
+}
+
+.project-param ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-param ul li {
+    padding: 5px 0px 0 10px;
+}
+
+@media screen and (max-width: 700px) {
+
+    .project-param article {
+        min-width: 33%;
+    }
+
+  }
