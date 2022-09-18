@@ -12,10 +12,19 @@ exports.createPages = async function ({ actions, graphql }) {
 
   data?.allMdx?.nodes.forEach((node) => {
     const slug = node.slug;
-    actions.createPage({
-      path: slug,
-      component: require.resolve('./src/templates/post-layout.js'),
-      context: { slug: slug },
-    });
+    if (slug.includes('projects/')) {
+      actions.createPage({
+        path: slug,
+        component: require.resolve('./src/templates/project-layout.js'),
+        context: { slug: slug },
+      });
+    }
+    else {
+      actions.createPage({
+        path: slug,
+        component: require.resolve('./src/templates/post-layout.js'),
+        context: { slug: slug },
+      });
+    }
   });
 };

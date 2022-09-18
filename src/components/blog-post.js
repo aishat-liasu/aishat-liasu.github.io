@@ -11,7 +11,6 @@ const BlogPost = ({ title, description, date, slug, id }) => {
 
   return (
     <li className={blogPost} onClick={showPostPage}>
-      {/* <img src="" alt="" width="300" height="300" /> */}
       <article>
         <h3>{title}</h3>
         <small>{date}</small>

@@ -1,0 +1,115 @@
+---
+date: 2022-08-28
+title: "Trivia App"
+description: "This is a full-stack responsive web app that allows users to add and questions and play a mini quiz"
+featuredImage: '../../images/01_trivia_project_home_page.png'
+---
+
+import ProjectParam from '../../components/project-param.js'
+
+### Trivia App
+
+This full-stack responsive web app allows users to add and delete questions and play a mini quiz. I built it to review my understanding of RESTful API service. This is also the second project I completed as part of my Udacity Full Stack Web Developer Nanodegree. As a full-stack application, it consists of both the frontend and backend.
+
+<ProjectParam techStack={["Python", "Flask", "PostgreSQL", "React", "CSS"]} gitHubRepo='https://github.com/aishat-liasu/trivia-app' />
+
+![Trivia Desktop View](../../images/01_trivia_project_home_page.png)
+<span>Desktop view of the Trivia App</span>
+
+#### Frontend
+The technologies used for the frontend were React, jQuery and CSS. As most of the logic for rendering the pages had been implemented, I decided to improve upon it by:
+
+1. Changing the tags for most elements to appropriate semantic tags, such as replacing the button elements with `button` tags, the list elements, and its items respectively with `ul` and `li` tags, and using `section`, `article` and `details` tags where appropriate
+2. Making the background colour of the navigation link of a page a shade of purple when a user navigates to the page for a better user experience
+3. Making the pages responsive for most screen sizes
+4. Adding a Popup Component to show up whenever an error occurs
+
+![Mobile view of Trivia App](../../images/01_trivia_project_home_page_mobile.png)
+<span>Mobile view of the Trivia App</span>
+
+![The Add Page of the Trivia App](../../images/02_trivia_project_add_page.png)
+<span>Add Page</span>
+
+![The view when error occurs on the Add Page of the Trivia App](../../images/02_trivia_project_add_page_popup.png)
+<span>Error on Add Page</span>
+
+
+#### Backend  
+The technologies used for the backend were Python, Flask, and PostgreSQL. The primary features of the application are listed below:
+
+1.	Displaying questions and answers to a user on the home page in paginated form
+2.	Filtering questions by categories 
+3.	Searching for questions using the search bar
+4.	Creating new questions
+5.	Deleting questions
+6.	Playing the quiz
+
+For each page to work as expected, I created 7 endpoints:
+
+1.	To get all questions with a page query to get a list of paginated questions in groups of 10
+2.	To create a new question
+3.	To delete a question
+4.	To get all categories
+5.	To get a filtered list of questions using the inputted text in the search bar as a filter
+6.	To get a list of paginated questions per category in groups of 10
+7.	To get a random list of questions either based on one category or all categories
+
+![Pagination Component](../../images/01_trivia_project_pagination_component.png)
+<span>The pagination section</span>
+
+![The Quiz Page of the Trivia App](../../images/03_trivia_project_quiz_page.png)
+<span>Quiz Page</span>
+
+![The view when a user inputs a correct answer on the Quiz Page of the Trivia App](../../images/03_trivia_project_quiz_page_correct_answer.png)
+<span>When a user inputs a correct answer on the Quiz Page</span>
+
+![The view when a user inputs an incorrect answer on the Quiz Page of the Trivia App](../../images/03_trivia_project_quiz_page_wrong_answer.png)
+<span>When a user inputs a wrong answer on the Quiz Page</span>
+
+#### The logic for the Quiz Page
+To play the quiz, a user must navigate to the quiz page and select a category; afterwards, a max of 5 questions is displayed in turns, and the user’s final score will be displayed on the screen. 
+When a user selects a category, the quiz page makes an API request to the server with a request body that includes an array of the previously asked questions’ ids and the category the user selected. The request would look like this:
+
+
+```
+{
+    "previous_questions": [18, 19], 
+    "quiz_category": { "type": "Art", "id": "2"}
+}
+```
+
+Whenever this request is sent, the function that is executed does the following:
+
+1.	Gets all questions under the selected category from the database
+2.	Saves an array of ids of questions of the selected category
+3.	Checks if the number of previously asked questions is not equal to the number of questions under the selected category
+4.	If no. 3 is equal; the next question is returned as an empty string in the response body
+5.	If no. 3 is not equal; then, a random number is generated within the range of the minimum and maximum values of ids from the array of questions ids
+6.	Checks if the number generated does not exist in the ids of previously asked questions
+7.	If no. 6 exists, then step 5 is repeated until no. 6 does not exist
+8.	If no. 6 does not exist, then the question with that id is fetched from the database and returned in the response body
+
+The response to that request is a JSON object that includes the following question to be displayed. The response would look like this:
+
+
+```
+{
+    "success": True,
+    "question": {
+        "answer": "Escher",
+        "category": 2,
+        "difficulty": 1,
+        "id": 16,
+        "question": "Which Dutch graphic artist–initials M C was a creator of optical illusions?"
+    }
+}
+```
+
+#### Learnings and Challenges
+For the frontend aspect of this project, I got to use the HTML tags details and summary for the first time in a project. I used it to reveal and hide the answers to questions on the home page. It was more efficient than writing a function that controls when to show or hide the answer depending on if a button is clicked.
+
+![When a user wants to view the answer](../../images/01_trivia_project_home_page_answer_display.png)
+<span>When the answer details is clicked</span>
+
+The most exciting part of the backend aspect was the quiz page. I translated the requirements into code, and the code worked as expected.
+

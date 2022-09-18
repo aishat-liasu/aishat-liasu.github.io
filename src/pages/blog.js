@@ -7,7 +7,8 @@ import { blogPage, blogPosts } from '../styles/blog.module.css';
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query GetBlogPosts {
-      allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+      allMdx(sort: { fields: frontmatter___date, order: DESC }
+        filter: {slug: {glob: "*blog/*"}}) {
         nodes {
           frontmatter {
             date(formatString: "MMMM D, YYYY", fromNow: true)

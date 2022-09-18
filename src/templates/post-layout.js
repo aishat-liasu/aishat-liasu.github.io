@@ -17,7 +17,8 @@ export const postsData = graphql`
       }
       body
     }
-    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+    allMdx(sort: { fields: frontmatter___date, order: DESC } 
+      filter: {slug: {glob: "*blog/*"}}) {
       nodes {
         frontmatter {
           title

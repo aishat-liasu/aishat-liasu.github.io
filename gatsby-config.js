@@ -1,19 +1,31 @@
 module.exports = {
   siteMetadata: {
     title: `Aishat Liasu - Software Engineer`,
-    siteUrl: `https://aishat-liasu.github.io`,
+    siteUrl: `https://aishatliasu.com`,
     description: 'I am a software engineer passionate about building solutions using human creativity and technology',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-mdx',
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'posts',
-        path: `${__dirname}/src/posts`,
+        name: 'content',
+        path: `${__dirname}/src/content`,
       },
-      __key: 'posts',
+      __key: 'content',
     },
     {
       resolve: 'gatsby-plugin-manifest',
@@ -26,5 +38,15 @@ module.exports = {
         icon: 'src/images/aishat_liasu.png',
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/images`,
+      },
+    },
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
   ],
 };
