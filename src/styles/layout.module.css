@@ -29,13 +29,9 @@
   max-width: 1200px;
 }
 
-.menu-button {
+
+.button-container, .close-btn-container {
   display: none;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: var(--white);
-  font-size: 20px;
 }
 
 @media screen and (max-width: 1199px) {
@@ -68,11 +64,56 @@
     max-width: 320px;
   }
 
-  .menu-button {
-    display: block;
-  }
-
   .main {
     margin-top: 50px;
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .button-container > span {
+    width: 20px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: var(--white);
+    margin-bottom: 4px;
+    display: inline-block;
+  }
+  
+  .button-container span:nth-last-child() {
+    margin-bottom: 0;
+    transform: rotate(45deg);
+  }
+  
+  .close-btn-container {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    height: 100%;
+    position: relative;
+    right: 30px;
+  }
+  
+  .close-btn-container > span {
+    display: inline-block;
+    width: 25px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: var(--white);
+    position: absolute;
+    top: 0; 
+  }
+  
+  .close-btn-container span:nth-child(1) {
+    transform: rotate(45deg);
+    transform-origin: center;
+  }
+  
+  .close-btn-container span:nth-child(2) {
+    transform: rotate(135deg);
+    transform-origin: center;
   }
 }
