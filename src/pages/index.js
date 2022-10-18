@@ -3,7 +3,11 @@ import { navigate } from 'gatsby';
 
 import Layout from '../components/layout';
 
-import { hero, heroImgSection, heroTextSection } from '../styles/index.module.css';
+import {
+  hero,
+  heroImgSection,
+  heroTextSection,
+} from '../styles/index.module.css';
 import aishat_liasu from '../images/aishat_liasu.png';
 
 const IndexPage = () => {
@@ -23,7 +27,11 @@ const IndexPage = () => {
           <button onClick={showAboutPage}>About me</button>
         </section>
         <section className={heroImgSection}>
-          <img src={aishat_liasu} alt="A masked selfie of Aishat somewhere in a Mosque at Ikeja, Lagos" />
+          <img
+            src={aishat_liasu}
+            alt="A masked selfie of Aishat somewhere in a Mosque at Ikeja, Lagos"
+            fetchpriority="high"
+          />
         </section>
       </div>
     </Layout>
