@@ -2,14 +2,8 @@
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid var(--taupe);
-}
-
-.blog-post:hover {
-  cursor: pointer;
-}
-
-.blog-post:hover a {
-  text-decoration: underline var(--white) solid 1px;
+  padding: 0;
+  margin-bottom: 50px;
 }
 
 .blog-post a {
@@ -18,6 +12,14 @@
   color: var(--white);
 }
 
-.blog-post a:hover {
+.blog-post article {
+  padding-bottom: 25px;
+}
+
+.blog-post:hover article a {
+  text-decoration: underline var(--white) solid 1px;
+}
+
+.blog-post article a:hover {
   text-decoration: underline var(--white) solid 1px;
 }

@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { navigate } from 'gatsby';
+import { Link } from 'gatsby';
 
 //import styles
 import {
   header,
-  headerLogo,
+  headerLink,
   nav,
   main,
   navMobile,
@@ -17,6 +17,10 @@ import '../styles/global.css';
 import Nav from './nav.js';
 import SeoComponent from './seo';
 
+//import assets
+import close_icon from '../images/close-icon.png';
+import logo from '../images/AishatLiasu.svg';
+
 const Layout = ({
   children,
   title = false,
@@ -28,10 +32,6 @@ const Layout = ({
 
   function openOrCloseMobileMenu() {
     setMobileMenu(!mobileMenu);
-  }
-
-  function showHomePage() {
-    navigate('/');
   }
 
   const showBlockStyle = {
@@ -51,7 +51,11 @@ const Layout = ({
         image={image}
       />
       <header className={header}>
-        <div className={headerLogo} onClick={showHomePage}></div>
+        <span>
+          <Link to="/" className={headerLink}>
+            <img src={logo} alt="Logo" />
+          </Link>
+        </span>
 
         <Nav styleClassName={nav} />
         <Nav styleClassName={navMobile} mobileMenu={mobileMenu} />
@@ -59,8 +63,9 @@ const Layout = ({
         <div
           className={buttonContainer}
           onClick={openOrCloseMobileMenu}
+          onKeyDown={openOrCloseMobileMenu}
           style={mobileMenu ? hideBlockStyle : {}}
-          aria-label="Menubutton"
+          aria-label="Menu Button"
           role="button"
           tabindex="0"
         >
@@ -72,13 +77,13 @@ const Layout = ({
         <div
           className={closeBtnContainer}
           onClick={openOrCloseMobileMenu}
+          onKeyDown={openOrCloseMobileMenu}
           style={mobileMenu ? showBlockStyle : hideBlockStyle}
-          aria-label="Close"
+          aria-label="Close Button"
           role="button"
           tabindex="0"
         >
-          <span></span>
-          <span></span>
+          <img src={close_icon} alt="Close Icon" />
         </div>
       </header>
       <main className={main}>{children}</main>

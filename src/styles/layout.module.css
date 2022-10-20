@@ -7,11 +7,9 @@
   min-height: 60px;
 }
 
-.header-logo {
-  background-image: url('../images/AishatLiasu.svg');
-  width: 100px;
-  height: 60px;
-  cursor: pointer;
+.header-link {
+  display: flex;
+  width: 100%;
 }
 
 .nav {
@@ -83,37 +81,12 @@
     display: inline-block;
   }
   
-  .button-container span:nth-last-child() {
-    margin-bottom: 0;
-    transform: rotate(45deg);
-  }
-  
   .close-btn-container {
     display: none;
     flex-direction: column;
     cursor: pointer;
     height: 100%;
-    position: relative;
-    right: 30px;
   }
+
   
-  .close-btn-container > span {
-    display: inline-block;
-    width: 25px;
-    height: 4px;
-    border-radius: 4px;
-    background-color: var(--white);
-    position: absolute;
-    top: 0; 
-  }
-  
-  .close-btn-container span:nth-child(1) {
-    transform: rotate(45deg);
-    transform-origin: center;
-  }
-  
-  .close-btn-container span:nth-child(2) {
-    transform: rotate(135deg);
-    transform-origin: center;
-  }
 }

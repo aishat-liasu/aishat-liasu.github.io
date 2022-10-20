@@ -2,7 +2,7 @@
   cursor: pointer;
 }
 
-.project-card:hover a {
+.project-card:hover article a {
   text-decoration: underline var(--white) solid 1px;
 }
 
@@ -26,6 +26,7 @@
   color: var(--white);
 }
 
-.project-card a:hover {
+
+.project-card article a:hover {
   text-decoration: underline;
 }
