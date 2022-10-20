@@ -1,22 +1,20 @@
 import * as React from 'react';
-import { Link, navigate } from 'gatsby';
+import { Link } from 'gatsby';
 import { blogPost } from '../styles/blog-post.module.css';
 
-const BlogPost = ({ title, description, date, slug, id }) => {
+const BlogPost = ({ title, description, date, slug }) => {
   const postLink = slug.split('/').pop() || '#';
 
-  function showPostPage() {
-    navigate(postLink);
-  }
-
   return (
-    <li className={blogPost} onClick={showPostPage}>
-      <article>
-        <h3>{title}</h3>
-        <small>{date}</small>
-        <p>{description}</p>
-        <Link to={postLink}>Read More &#8594;</Link>
-      </article>
+    <li className={blogPost}>
+      <Link to={postLink}>
+        <article>
+          <h3>{title}</h3>
+          <small>{date}</small>
+          <p>{description}</p>
+          <Link to={postLink}>Read More &#8594;</Link>
+        </article>
+      </Link>
     </li>
   );
 };
