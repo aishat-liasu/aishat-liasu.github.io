@@ -1,21 +1,17 @@
 import * as React from 'react';
-import { navigate } from 'gatsby';
+import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/layout';
 
 import {
   hero,
+  imgWrapper,
   heroImgSection,
   heroTextSection,
 } from '../styles/index.module.css';
-import aishat_liasu from '../images/aishat_liasu.png';
 
 const IndexPage = () => {
-  function showAboutPage(e) {
-    e.preventDefault();
-    navigate('/about');
-  }
-
   return (
     <Layout>
       <div className={hero}>
@@ -24,13 +20,16 @@ const IndexPage = () => {
             <span> My name is </span> <br /> Aishat Liasu
           </h1>
           <h2>I'm a Full Stack Web Developer and Software Engineer</h2>
-          <button onClick={showAboutPage}>About me</button>
+
+          <span>
+            <Link to="/about">About Me</Link>
+          </span>
         </section>
         <section className={heroImgSection}>
-          <img
-            src={aishat_liasu}
+          <StaticImage
+            src="../images/aishat_liasu.png"
             alt="A masked selfie of Aishat somewhere in a Mosque at Ikeja, Lagos"
-            fetchpriority="high"
+            className={imgWrapper}
           />
         </section>
       </div>
