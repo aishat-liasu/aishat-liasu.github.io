@@ -9,12 +9,6 @@
   padding: 0;
 }
 
-.blog-posts li {
-  padding: 0;
-  padding-bottom: 25px;
-  margin-bottom: 50px;
-}
-
 @media screen and (max-width: 800px) {
   .blog-posts {
     margin-top: 50px;
