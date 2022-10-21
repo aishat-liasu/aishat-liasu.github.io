@@ -67,7 +67,7 @@ const Layout = ({
           style={mobileMenu ? hideBlockStyle : {}}
           aria-label="Menu Button"
           role="button"
-          tabindex="0"
+          tabIndex="0"
         >
           <span></span>
           <span></span>
@@ -81,7 +81,7 @@ const Layout = ({
           style={mobileMenu ? showBlockStyle : hideBlockStyle}
           aria-label="Close Button"
           role="button"
-          tabindex="0"
+          tabIndex="0"
         >
           <img src={close_icon} alt="Close Icon" />
         </div>
