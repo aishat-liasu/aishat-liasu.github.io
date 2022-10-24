@@ -24,13 +24,16 @@ const IndexPage = () => {
 
           <Link to="/about">About Me</Link>
         </section>
-        <section className={heroImgSection}>
-          <StaticImage
-            src="../images/aishat_liasu.png"
-            alt="A masked selfie of Aishat somewhere in a Mosque at Ikeja, Lagos"
-            className={imgWrapper}
-          />
-        </section>
+
+        <StaticImage
+          src="../images/aishat_liasu.png"
+          alt="A masked selfie of Aishat somewhere in a Mosque at Ikeja, Lagos"
+          as="section"
+          className={heroImgSection}
+          style={{
+            overflow: 'visible',
+          }}
+        />
       </div>
     </Layout>
   );
