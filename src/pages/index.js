@@ -17,21 +17,23 @@ const IndexPage = () => {
       <div className={hero}>
         <section className={heroTextSection}>
           <h1>
-            <span> My name is </span> <br /> Aishat Liasu
+            <span>My name is</span>
+            <span>Aishat Liasu</span>
           </h1>
           <h2>I'm a Full Stack Web Developer and Software Engineer</h2>
 
-          <span>
-            <Link to="/about">About Me</Link>
-          </span>
+          <Link to="/about">About Me</Link>
         </section>
-        <section className={heroImgSection}>
-          <StaticImage
-            src="../images/aishat_liasu.png"
-            alt="A masked selfie of Aishat somewhere in a Mosque at Ikeja, Lagos"
-            className={imgWrapper}
-          />
-        </section>
+
+        <StaticImage
+          src="../images/aishat_liasu.png"
+          alt="A masked selfie of Aishat somewhere in a Mosque at Ikeja, Lagos"
+          as="section"
+          className={heroImgSection}
+          style={{
+            overflow: 'visible',
+          }}
+        />
       </div>
     </Layout>
   );
