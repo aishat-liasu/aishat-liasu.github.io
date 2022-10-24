@@ -17,6 +17,10 @@
 }
 
 .hero-text-section h1 span {
+  display: block;
+}
+
+.hero-text-section h1 span:first-of-type {
   font-size: 20px;
   font-weight: 500;
 }
@@ -27,16 +31,12 @@
   border-radius: 10px;
   background-color: var(--taupe);
   color: var(--white);
+  display: inline-block;
 }
 
 .hero-text-section a:hover {
   background-color: var(--darktaupe);
   text-decoration: underline;
-}
-
-.hero-text-section > span {
-  display: flex;
-  width: 100%;
 }
 
 .hero-img-section {
@@ -83,7 +83,7 @@
     margin: 0 auto;
   }
 
-  .hero-text-section > span {
+  .hero-text-section h1 span {
     justify-content: center;
   }
 
