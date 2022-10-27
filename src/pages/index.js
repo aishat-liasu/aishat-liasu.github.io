@@ -6,7 +6,6 @@ import Layout from '../components/layout';
 
 import {
   hero,
-  imgWrapper,
   heroImgSection,
   heroTextSection,
 } from '../styles/index.module.css';

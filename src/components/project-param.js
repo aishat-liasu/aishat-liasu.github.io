@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { projectParam } from '../styles/project-param.module.css';
 
-const ProjectParam = ({ githubRepo, liveLink, techStack }) => {
+const ProjectParam = ({ gitHubRepo = '#', liveLink, techStack }) => {
   return (
     <div className={projectParam}>
       <article>
@@ -16,7 +16,7 @@ const ProjectParam = ({ githubRepo, liveLink, techStack }) => {
       </article>
       <article>
         <h4>Codebase</h4>
-        <a href={githubRepo} target="_blank" rel="noopener noreferrer">
+        <a href={gitHubRepo} target="_blank" rel="noopener noreferrer">
           GitHub Repo
         </a>
       </article>
