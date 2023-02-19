@@ -3,7 +3,12 @@ import Layout from '../components/layout';
 import NavButton from '../components/nav-button';
 import { Link, graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { projectPage, projectHeader, projectFooter, content } from '../styles/project-layout.module.css';
+import {
+  projectPage,
+  projectHeader,
+  projectFooter,
+  content,
+} from '../styles/project-layout.module.css';
 
 export const projectsData = graphql`
   query GetCurrentProjectAndAllProjects($slug: String) {
@@ -17,8 +22,10 @@ export const projectsData = graphql`
       }
       body
     }
-    allMdx(sort: { fields: frontmatter___date, order: DESC } 
-    filter: {slug: {glob: "*projects/*"}}) {
+    allMdx(
+      sort: { fields: frontmatter___date, order: DESC }
+      filter: { slug: { glob: "*projects/*" } }
+    ) {
       nodes {
         frontmatter {
           title
@@ -37,7 +44,9 @@ const ProjectLayout = ({ data }) => {
   const { title, description } = currentProjectData.frontmatter;
 
   const numOfProjects = projects.length;
-  const currentProjectIndex = projects.findIndex((project) => project.id === currentProjectData.id);
+  const currentProjectIndex = projects.findIndex(
+    project => project.id === currentProjectData.id
+  );
 
   return (
     <Layout title={title} description={description}>
@@ -46,14 +55,22 @@ const ProjectLayout = ({ data }) => {
           <h2>
             <Link to="/projects"> Projects</Link> &gt; {title}
           </h2>
-          <NavButton currentIndex={currentProjectIndex} total={numOfProjects} list={projects} />
+          <NavButton
+            currentIndex={currentProjectIndex}
+            total={numOfProjects}
+            list={projects}
+          />
         </header>
         <section className={content}>
           <MDXRenderer>{currentProjectData.body}</MDXRenderer>
         </section>
 
         <footer className={projectFooter}>
-          <NavButton currentIndex={currentProjectIndex} total={numOfProjects} list={projects} />
+          <NavButton
+            currentIndex={currentProjectIndex}
+            total={numOfProjects}
+            list={projects}
+          />
         </footer>
       </section>
     </Layout>

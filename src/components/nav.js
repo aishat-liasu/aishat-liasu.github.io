@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { Link } from 'gatsby';
 import { navList, socialNav } from '../styles/nav.module.css';
 
 //import social icons
@@ -31,7 +31,11 @@ const Nav = ({ styleClassName, mobileMenu = false }) => {
           </Link>
         </li>
         <li>
-          <Link to="/projects" activeStyle={activeLinkStyle} partiallyActive={true}>
+          <Link
+            to="/projects"
+            activeStyle={activeLinkStyle}
+            partiallyActive={true}
+          >
             Projects
           </Link>
         </li>
@@ -44,22 +48,38 @@ const Nav = ({ styleClassName, mobileMenu = false }) => {
 
       <ul className={socialNav}>
         <li>
-          <a href="https://twitter.com/AishatLiasu" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://twitter.com/AishatLiasu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={twitterIcon} alt="Twitter Logo" />
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/aishat-liasu" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.linkedin.com/in/aishat-liasu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={linkedinIcon} alt="LinkedIn Logo" />
           </a>
         </li>
         <li>
-          <a href="https://github.com/aishat-liasu" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/aishat-liasu"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={githubIcon} alt="GitHub Logo" />
           </a>
         </li>
         <li>
-          <a href="mailto:aishatliasu17965@gmail.com" target="_blank" rel="noopener noreferrer">
+          <a
+            href="mailto:aishatliasu17965@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={emailIcon} alt="Email Logo" />
           </a>
         </li>
