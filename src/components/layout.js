@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
+import { Link, Script } from 'gatsby';
 
 //import styles
 import {
@@ -87,6 +87,19 @@ const Layout = ({
         </div>
       </header>
       <main className={main}>{children}</main>
+
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${'G-89HHSZSCLE'}`}
+        strategy="off-main-thread"
+      />
+      <Script id="gtag-config" strategy="off-main-thread" forward={[`gtag`]}>
+        {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments)};
+        gtag('js', new Date());
+        gtag('config', ${'G-89HHSZSCLE'}, { page_path: location ? location.pathname + location.search + location.hash : undefined })
+      `}
+      </Script>
     </>
   );
 };
