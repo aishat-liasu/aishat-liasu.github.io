@@ -12,7 +12,7 @@ const BlogPost = ({ title, description, date, slug }) => {
           <h3>{title}</h3>
           <small>{date}</small>
           <p>{description}</p>
-          <Link to={postLink}>Read More &#8594;</Link>
+          <p>Read More &#8594;</p>
         </article>
       </Link>
     </li>

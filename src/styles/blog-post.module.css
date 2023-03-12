@@ -16,10 +16,10 @@
   padding-bottom: 25px;
 }
 
-.blog-post:hover article a {
-  text-decoration: underline var(--white) solid 1px;
+.blog-post article p:last-child {
+  margin: 0;
 }
 
-.blog-post article a:hover {
+.blog-post:hover article p:last-child {
   text-decoration: underline var(--white) solid 1px;
 }
