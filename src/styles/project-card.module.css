@@ -2,10 +2,6 @@
   cursor: pointer;
 }
 
-.project-card:hover article a {
-  text-decoration: underline var(--white) solid 1px;
-}
-
 .img-container {
   padding: 20px 10px;
   display: flex;
@@ -26,7 +22,10 @@
   color: var(--white);
 }
 
+.project-card article p:last-child {
+  margin: 0;
+}
 
-.project-card article a:hover {
+.project-card:hover article p:last-child {
   text-decoration: underline;
 }

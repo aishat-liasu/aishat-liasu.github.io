@@ -20,7 +20,7 @@ const ProjectCard = ({ title, description, slug, featuredImage }) => {
         <article>
           <h3>{title}</h3>
           <p>{description}</p>
-          <Link to={projectLink}>Read More &#8594;</Link>
+          <p>Read More &#8594;</p>
         </article>
       </Link>
     </li>
