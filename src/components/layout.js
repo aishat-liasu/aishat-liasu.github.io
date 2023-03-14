@@ -11,7 +11,6 @@ import {
   buttonContainer,
   closeBtnContainer,
 } from '../styles/layout.module.css';
-import '../styles/global.css';
 
 //import components
 import Nav from './nav.js';
