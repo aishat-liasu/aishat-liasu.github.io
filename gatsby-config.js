@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Aishat Liasu - Software Engineer`,
     siteUrl: `https://aishatliasu.com`,
-    description: 'I am a software engineer passionate about building solutions using human creativity and technology',
+    description:
+      'I am a software engineer passionate about building solutions using human creativity and technology',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -48,5 +49,8 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+  ],
+  partytownProxiedURLs: [
+    `https://www.googletagmanager.com/gtag/js?id=${'G-89HHSZSCLE'}`,
   ],
 };
