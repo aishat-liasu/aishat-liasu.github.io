@@ -14,7 +14,7 @@ const Nav = ({ styleClassName, mobileMenu = false }) => {
   };
 
   const activeLinkStyle = {
-    fontWeight: 900,
+    fontWeight: 800,
   };
 
   return (
