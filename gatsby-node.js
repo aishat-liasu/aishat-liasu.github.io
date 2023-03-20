@@ -1,4 +1,5 @@
 exports.createPages = async function ({ actions, graphql }) {
+  const { createRedirect } = actions;
   const { data } = await graphql(`
     query {
       allMdx(sort: { fields: frontmatter___date, order: DESC }) {
@@ -10,7 +11,7 @@ exports.createPages = async function ({ actions, graphql }) {
     }
   `);
 
-  data?.allMdx?.nodes.forEach((node) => {
+  data?.allMdx?.nodes.forEach(node => {
     const slug = node.slug;
     if (slug.includes('projects/')) {
       actions.createPage({
@@ -18,13 +19,18 @@ exports.createPages = async function ({ actions, graphql }) {
         component: require.resolve('./src/templates/project-layout.js'),
         context: { slug: slug },
       });
-    }
-    else {
+    } else {
       actions.createPage({
         path: slug,
         component: require.resolve('./src/templates/post-layout.js'),
         context: { slug: slug },
       });
     }
+  });
+  createRedirect({
+    fromPath:
+      '/__third-party-proxy?url=https://www.googletagmanager.com/gtag/js?id=G-89HHSZSCLE',
+    toPath: 'https://www.googletagmanager.com/gtag/js?id=G-89HHSZSCLE',
+    statusCode: 200,
   });
 };
