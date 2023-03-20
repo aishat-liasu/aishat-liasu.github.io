@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link, navigate } from 'gatsby';
+import { navigate } from 'gatsby';
 
 const NavButton = ({ currentIndex = 0, total = 1, list = [] }) => {
   //currentIndex is the current index of either a  or a project
@@ -20,10 +20,16 @@ const NavButton = ({ currentIndex = 0, total = 1, list = [] }) => {
 
   return (
     <nav>
-      <button disabled={currentIndex + 1 >= total ? true : false} onClick={(e) => handleClickNavButton('prev', e)}>
+      <button
+        disabled={currentIndex + 1 >= total ? true : false}
+        onClick={e => handleClickNavButton('prev', e)}
+      >
         &lt;
       </button>
-      <button disabled={currentIndex - 1 < 0 ? true : false} onClick={(e) => handleClickNavButton('next', e)}>
+      <button
+        disabled={currentIndex - 1 < 0 ? true : false}
+        onClick={e => handleClickNavButton('next', e)}
+      >
         &gt;
       </button>
     </nav>
