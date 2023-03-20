@@ -33,4 +33,11 @@ exports.createPages = async function ({ actions, graphql }) {
     toPath: 'https://www.googletagmanager.com/gtag/js?id=G-89HHSZSCLE',
     statusCode: 200,
   });
+
+  createRedirect({
+    fromPath:
+      '/__third-party-proxy?url=https%3A%2F%2Fwww.googletagmanager.com%2Fgtag%2Fjs%3Fid%3DG-89HHSZSCLE',
+    toPath: 'https://www.googletagmanager.com/gtag/js?id=G-89HHSZSCLE',
+    statusCode: 200,
+  });
 };
