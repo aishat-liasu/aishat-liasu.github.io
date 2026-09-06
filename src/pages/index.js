@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
 import Layout from '../components/layout';
+import SeoComponent from '../components/seo';
 
 import {
   hero,
@@ -19,7 +20,7 @@ const IndexPage = () => {
             <span>My name is</span>
             <span>Aishat Liasu</span>
           </h1>
-          <h2>I'm a Full Stack Web Developer and Software Engineer</h2>
+          <h2>I am a Full Stack Web Developer and Software Engineer</h2>
 
           <Link to="/about">About Me</Link>
         </section>
@@ -37,5 +38,7 @@ const IndexPage = () => {
     </Layout>
   );
 };
+
+export const Head = () => <SeoComponent />;
 
 export default IndexPage;

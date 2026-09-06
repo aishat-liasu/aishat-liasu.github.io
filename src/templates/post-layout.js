@@ -1,8 +1,8 @@
 import * as React from 'react';
 import Layout from '../components/layout';
 import NavButton from '../components/nav-button';
+import SeoComponent from '../components/seo';
 import { Link, graphql } from 'gatsby';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 import {
   postPage,
   postHeader,
@@ -11,37 +11,40 @@ import {
 } from '../styles/post-layout.module.css';
 
 export const postsData = graphql`
-  query GetCurrentPostAndAllPosts($slug: String) {
-    mdx(slug: { eq: $slug }) {
+  query GetCurrentPostAndAllPosts($id: String!) {
+    mdx(id: { eq: $id }) {
       id
-      slug
+      fields {
+        slug
+      }
       frontmatter {
         date
         description
         title
       }
-      body
     }
-    allMdx(
-      sort: { fields: frontmatter___date, order: DESC }
-      filter: { slug: { glob: "*blog/*" } }
-    ) {
+    allMdx(sort: { frontmatter: { date: DESC } }) {
       nodes {
         frontmatter {
           title
         }
         id
-        slug
+        fields {
+          slug
+        }
       }
     }
   }
 `;
 
-const PostLayout = ({ data }) => {
+const PostLayout = ({ data, children }) => {
   const currentPostData = data.mdx;
-  const posts = data.allMdx?.nodes || [];
+  const posts =
+    data.allMdx?.nodes?.filter(node =>
+      (node.slug || node.fields?.slug)?.includes('blog/')
+    ) || [];
 
-  const { title, description } = currentPostData.frontmatter;
+  const { title } = currentPostData.frontmatter;
 
   const numOfPosts = posts.length;
   const currentPostIndex = posts.findIndex(
@@ -49,7 +52,7 @@ const PostLayout = ({ data }) => {
   );
 
   return (
-    <Layout title={title} description={description}>
+    <Layout>
       <section className={postPage}>
         <header className={postHeader}>
           <h2>
@@ -61,9 +64,7 @@ const PostLayout = ({ data }) => {
             list={posts}
           />
         </header>
-        <section className={content}>
-          <MDXRenderer>{currentPostData.body}</MDXRenderer>
-        </section>
+        <section className={content}>{children}</section>
 
         <footer className={postFooter}>
           <NavButton
@@ -75,6 +76,11 @@ const PostLayout = ({ data }) => {
       </section>
     </Layout>
   );
+};
+
+export const Head = ({ data }) => {
+  const { title, description } = data.mdx.frontmatter;
+  return <SeoComponent title={title} description={description} />;
 };
 
 export default PostLayout;

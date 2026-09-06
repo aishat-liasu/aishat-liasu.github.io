@@ -32,7 +32,6 @@ const linkStyles = {
 const NotFoundPage = () => {
   return (
     <main style={pageStyles}>
-      <title>Not found</title>
       <h1 style={headingStyles}>Page not found</h1>
       <p style={paragraphStyles}>
         Sorry
@@ -56,5 +55,7 @@ const NotFoundPage = () => {
     </main>
   );
 };
+
+export const Head = () => <title>Page Not Found | Aishat Liasu</title>;
 
 export default NotFoundPage;

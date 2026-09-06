@@ -1,10 +1,11 @@
 import * as React from 'react';
 import Layout from '../components/layout';
+import SeoComponent from '../components/seo';
 import { aboutPage, content, bold } from '../styles/about.module.css';
 
 const AboutPage = () => {
   return (
-    <Layout title="About Me">
+    <Layout>
       <section className={aboutPage}>
         <h2>About Me</h2>
         <h3>Who am I</h3>
@@ -41,5 +42,7 @@ const AboutPage = () => {
     </Layout>
   );
 };
+
+export const Head = () => <SeoComponent title="About Me" />;
 
 export default AboutPage;
