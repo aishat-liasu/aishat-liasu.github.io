@@ -8,10 +8,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 const ProjectsPage = () => {
   const data = useStaticQuery(graphql`
     query GetProjects {
-      allMdx(
-        sort: { fields: frontmatter___date, order: DESC }
-        filter: { slug: { glob: "*projects/*" } }
-      ) {
+      allMdx(sort: { frontmatter: { date: DESC } }) {
         nodes {
           frontmatter {
             date(formatString: "MMMM D, YYYY", fromNow: true)
@@ -24,13 +21,18 @@ const ProjectsPage = () => {
             }
           }
           id
-          slug
+          fields {
+            slug
+          }
         }
       }
     }
   `);
 
-  const projects = data?.allMdx?.nodes ?? [];
+  const projects =
+    data?.allMdx?.nodes?.filter((node) =>
+      (node.slug || node.fields?.slug)?.includes('projects/')
+    ) ?? [];
 
   return (
     <Layout title="Projects">
@@ -42,10 +44,11 @@ const ProjectsPage = () => {
         </p>
         <ul className={projectList}>
           {projects.length > 0 ? (
-            projects.map(project => (
+            projects.map((project) => (
               <ProjectCard
                 {...project.frontmatter}
                 {...project}
+                slug={project.slug || project.fields?.slug}
                 key={project.id}
               />
             ))

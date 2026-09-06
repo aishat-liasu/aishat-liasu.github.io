@@ -2,8 +2,9 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import { blogPost } from '../styles/blog-post.module.css';
 
-const BlogPost = ({ title, description, date, slug }) => {
-  const postLink = slug.split('/').pop() || '#';
+const BlogPost = ({ title, description, date, slug = '', fields }) => {
+  const slugVal = slug || fields?.slug || '';
+  const postLink = slugVal ? slugVal.replace(/\/$/, '').split('/').pop() : '#';
 
   return (
     <li className={blogPost}>

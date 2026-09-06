@@ -6,7 +6,6 @@ module.exports = {
       'I am a software engineer passionate about building solutions using human creativity and technology',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-mdx',
       options: {

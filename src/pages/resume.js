@@ -1,10 +1,17 @@
 import * as React from 'react';
 import Layout from '../components/layout';
-import { resumePage, resumeContent, work, education, skills } from '../styles/resume.module.css';
+import SeoComponent from '../components/seo';
+import {
+  resumePage,
+  resumeContent,
+  work,
+  education,
+  skills,
+} from '../styles/resume.module.css';
 
 const ResumePage = () => {
   return (
-    <Layout title="Resume">
+    <Layout>
       <section className={resumePage}>
         <h2>Resume</h2>
         <p>Here is a summary of my academic and work experience</p>
@@ -17,10 +24,23 @@ const ResumePage = () => {
                 Babban Gona | <span>August 2021 - Present</span>
               </p>
               <ul>
-                <li>Developing the enterprise backend systems to serve over 200,000 farmers by 2022</li>
-                <li>Training junior engineers to develop backend API endpoints from ideation to product</li>
-                <li>Collaborated with other engineers to implement a RESTful service API that helped distribute farming inputs to over 30,000 farmers working with the company</li>
-                <li>Built reusable React components to help speed up development time</li>
+                <li>
+                  Developing the enterprise backend systems to serve over
+                  200,000 farmers by 2022
+                </li>
+                <li>
+                  Training junior engineers to develop backend API endpoints
+                  from ideation to product
+                </li>
+                <li>
+                  Collaborated with other engineers to implement a RESTful
+                  service API that helped distribute farming inputs to over
+                  30,000 farmers working with the company
+                </li>
+                <li>
+                  Built reusable React components to help speed up development
+                  time
+                </li>
               </ul>
             </article>
 
@@ -30,9 +50,20 @@ const ResumePage = () => {
                 Babban Gona | <span>February 2021 - July 2021</span>
               </p>
               <ul>
-                <li>Collaborated with the product team and a backend engineer to build an internal web application that automates the registration process for new employees and controls over 500 employees’ access to other internal applications</li>
-                <li>Worked with another intern to build the company’s website using HTML, CSS and WordPress</li>
-                <li>Maintained the company’s website to enable a good user experience and disseminate new content</li>
+                <li>
+                  Collaborated with the product team and a backend engineer to
+                  build an internal web application that automates the
+                  registration process for new employees and controls over 500
+                  employees’ access to other internal applications
+                </li>
+                <li>
+                  Worked with another intern to build the company’s website
+                  using HTML, CSS and WordPress
+                </li>
+                <li>
+                  Maintained the company’s website to enable a good user
+                  experience and disseminate new content
+                </li>
               </ul>
             </article>
           </section>
@@ -73,8 +104,10 @@ const ResumePage = () => {
                   First Class Honours - <b>4.84/5.0 CGPA</b>
                 </li>
                 <li>
-                  Relevant Coursework: Pure Mathematics, Applied Mathematics, Programming (C++), Logic Design and Digital System, Digital Computer
-                  Design, Microcomputer Graphics, Microprocessors and Microcomputers
+                  Relevant Coursework: Pure Mathematics, Applied Mathematics,
+                  Programming (C++), Logic Design and Digital System, Digital
+                  Computer Design, Microcomputer Graphics, Microprocessors and
+                  Microcomputers
                 </li>
               </ul>
             </article>
@@ -82,7 +115,10 @@ const ResumePage = () => {
 
           <section className={skills}>
             <h3>Skills</h3>
-            <p>Below is the list of technologies, and tools I have learnt and used over the last few years</p>
+            <p>
+              Below is the list of technologies, and tools I have learnt and
+              used over the last few years
+            </p>
             <ul>
               <li>HTML</li>
               <li>CSS</li>
@@ -111,5 +147,7 @@ const ResumePage = () => {
     </Layout>
   );
 };
+
+export const Head = () => <SeoComponent title="Resume" />;
 
 export default ResumePage;

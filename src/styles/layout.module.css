@@ -27,8 +27,8 @@
   max-width: 1200px;
 }
 
-
-.button-container, .close-btn-container {
+.button-container,
+.close-btn-container {
   display: none;
 }
 
@@ -71,7 +71,7 @@
     flex-direction: column;
     cursor: pointer;
   }
-  
+
   .button-container > span {
     width: 20px;
     height: 3px;
@@ -80,7 +80,7 @@
     margin-bottom: 4px;
     display: inline-block;
   }
-  
+
   .close-btn-container {
     display: none;
     flex-direction: column;
@@ -91,6 +91,4 @@
   .close-btn-container img {
     width: 32px;
   }
-
-  
 }

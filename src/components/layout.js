@@ -14,19 +14,12 @@ import {
 
 //import components
 import Nav from './nav.js';
-import SeoComponent from './seo';
 
 //import assets
 import close_icon from '../images/close-icon.png';
 import logo from '../images/AishatLiasu.svg';
 
-const Layout = ({
-  children,
-  title = false,
-  description = false,
-  path = false,
-  image = false,
-}) => {
+const Layout = ({ children }) => {
   const [mobileMenu, setMobileMenu] = React.useState(false);
 
   function openOrCloseMobileMenu() {
@@ -43,12 +36,6 @@ const Layout = ({
 
   return (
     <>
-      <SeoComponent
-        title={title}
-        description={description}
-        path={path}
-        image={image}
-      />
       <header className={header}>
         <span>
           <Link to="/" className={headerLink}>
