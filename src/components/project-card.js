@@ -3,8 +3,17 @@ import { Link } from 'gatsby';
 import { projectCard, imgContainer } from '../styles/project-card.module.css';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
-const ProjectCard = ({ title, description, slug, featuredImage }) => {
-  const projectLink = slug.split('/').pop() || '#';
+const ProjectCard = ({
+  title,
+  description,
+  slug = '',
+  fields,
+  featuredImage,
+}) => {
+  const slugVal = slug || fields?.slug || '';
+  const projectLink = slugVal
+    ? slugVal.replace(/\/$/, '').split('/').pop()
+    : '#';
 
   const imageSrc = featuredImage
     ? featuredImage.childImageSharp.gatsbyImageData
