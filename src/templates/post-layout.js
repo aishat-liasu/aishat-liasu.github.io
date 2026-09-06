@@ -40,7 +40,7 @@ export const postsData = graphql`
 const PostLayout = ({ data, children }) => {
   const currentPostData = data.mdx;
   const posts =
-    data.allMdx?.nodes?.filter(node =>
+    data.allMdx?.nodes?.filter((node) =>
       (node.slug || node.fields?.slug)?.includes('blog/')
     ) || [];
 
@@ -48,7 +48,7 @@ const PostLayout = ({ data, children }) => {
 
   const numOfPosts = posts.length;
   const currentPostIndex = posts.findIndex(
-    post => post.id === currentPostData.id
+    (post) => post.id === currentPostData.id
   );
 
   return (

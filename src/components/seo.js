@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-const SeoComponent = props => {
+const SeoComponent = (props) => {
   const data = useStaticQuery(graphql`
     query GetSiteMetadata {
       site {

@@ -22,13 +22,13 @@ const NavButton = ({ currentIndex = 0, total = 1, list = [] }) => {
     <nav>
       <button
         disabled={currentIndex + 1 >= total ? true : false}
-        onClick={e => handleClickNavButton('prev', e)}
+        onClick={(e) => handleClickNavButton('prev', e)}
       >
         &lt;
       </button>
       <button
         disabled={currentIndex - 1 < 0 ? true : false}
-        onClick={e => handleClickNavButton('next', e)}
+        onClick={(e) => handleClickNavButton('next', e)}
       >
         &gt;
       </button>

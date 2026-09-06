@@ -30,7 +30,7 @@ const ProjectsPage = () => {
   `);
 
   const projects =
-    data?.allMdx?.nodes?.filter(node =>
+    data?.allMdx?.nodes?.filter((node) =>
       (node.slug || node.fields?.slug)?.includes('projects/')
     ) ?? [];
 
@@ -44,7 +44,7 @@ const ProjectsPage = () => {
         </p>
         <ul className={projectList}>
           {projects.length > 0 ? (
-            projects.map(project => (
+            projects.map((project) => (
               <ProjectCard
                 {...project.frontmatter}
                 {...project}

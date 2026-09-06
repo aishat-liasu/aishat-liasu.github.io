@@ -2,6 +2,5 @@ node_modules/
 .cache/
 public
 
-.prettierrc
 .env.*
 .DS_Store

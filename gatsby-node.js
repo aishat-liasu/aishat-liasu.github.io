@@ -1,5 +1,5 @@
-const path = require("path");
-const { createFilePath } = require("gatsby-source-filesystem");
+const path = require('path');
+const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
@@ -46,7 +46,7 @@ exports.createPages = async function ({ actions, graphql }) {
     }
   `);
 
-  data?.allMdx?.nodes.forEach(node => {
+  data?.allMdx?.nodes.forEach((node) => {
     const slug = node.fields?.slug;
     if (slug?.includes('projects/')) {
       actions.createPage({
@@ -64,13 +64,15 @@ exports.createPages = async function ({ actions, graphql }) {
   });
 
   createRedirect({
-    fromPath: '/__third-party-proxy?url=https://www.googletagmanager.com/gtag/js?id=G-89HHSZSCLE',
+    fromPath:
+      '/__third-party-proxy?url=https://www.googletagmanager.com/gtag/js?id=G-89HHSZSCLE',
     toPath: 'https://www.googletagmanager.com/gtag/js?id=G-89HHSZSCLE',
     statusCode: 200,
   });
 
   createRedirect({
-    fromPath: '/__third-party-proxy?url=https%3A%2F%2Fwww.googletagmanager.com%2Fgtag%2Fjs%3Fid%3DG-89HHSZSCLE',
+    fromPath:
+      '/__third-party-proxy?url=https%3A%2F%2Fwww.googletagmanager.com%2Fgtag%2Fjs%3Fid%3DG-89HHSZSCLE',
     toPath: 'https://www.googletagmanager.com/gtag/js?id=G-89HHSZSCLE',
     statusCode: 200,
   });

@@ -40,7 +40,7 @@ export const projectsData = graphql`
 const ProjectLayout = ({ data, children }) => {
   const currentProjectData = data.mdx;
   const projects =
-    data.allMdx?.nodes?.filter(node =>
+    data.allMdx?.nodes?.filter((node) =>
       (node.slug || node.fields?.slug)?.includes('projects/')
     ) || [];
 
@@ -48,7 +48,7 @@ const ProjectLayout = ({ data, children }) => {
 
   const numOfProjects = projects.length;
   const currentProjectIndex = projects.findIndex(
-    project => project.id === currentProjectData.id
+    (project) => project.id === currentProjectData.id
   );
 
   return (

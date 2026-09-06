@@ -24,7 +24,10 @@ const BlogPage = () => {
     }
   `);
 
-  const posts = data?.allMdx?.nodes?.filter(node => (node.slug || node.fields?.slug)?.includes('blog/')) ?? [];
+  const posts =
+    data?.allMdx?.nodes?.filter((node) =>
+      (node.slug || node.fields?.slug)?.includes('blog/')
+    ) ?? [];
 
   return (
     <Layout>
@@ -33,7 +36,7 @@ const BlogPage = () => {
         <p>At times I try to put down my thoughts for future reference</p>
         <ul className={blogPosts}>
           {posts.length > 0 ? (
-            posts.map(post => (
+            posts.map((post) => (
               <BlogPost
                 {...post.frontmatter}
                 {...post}
