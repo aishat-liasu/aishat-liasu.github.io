@@ -4,3 +4,4 @@ public
 
 .prettierrc
 .env.*
+.DS_Store
